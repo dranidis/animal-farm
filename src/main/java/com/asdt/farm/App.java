@@ -9,12 +9,10 @@ public class App {
         Farm farm = new Farm();
 
         Dog dog = new Dog("Lucy");
-<<<<<<< Updated upstream
-=======
         Sloth sloth = new Sloth("Flash");
->>>>>>> Stashed changes
 
         farm.accept(dog);
+        farm.accept(sloth);
 
         farm.simulateSteps(25);
     }
