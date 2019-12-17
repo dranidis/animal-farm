@@ -2,29 +2,22 @@ package com.asdt.farm;
 
 public abstract class Animal {
 
-	protected abstract boolean isTired();
-
-	protected abstract boolean isHungry();
-
+    private AnimalState state;
+	protected abstract AnimalState getState();
 	protected abstract void move();
-
 	protected abstract void eat();
-
     protected abstract void sleep();
-    
-    public void simulateDay() {
-        while (true) {
-            while (!isHungry() && !isTired()) {
-                move();
-            }
-            if (isTired()) {
-                break;
-            } else {
-                eat();
-                continue;
-            }
-        }
-        sleep();
+
+    public Animal (AnimalState state) {
+        this.state = state;
+    }
+
+    public void setState(AnimalState newState) {
+        state = newState;
+    }
+
+    public void simulateStep() {
+        state.act(state, this);
     }
 
 
