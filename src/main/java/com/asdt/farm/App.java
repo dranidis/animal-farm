@@ -10,6 +10,7 @@ public class App {
 
         Dog dog = new Dog("Lucy");
         Sloth sloth = new Sloth("Flash");
+
         farm.accept(dog);
         farm.accept(sloth);
 
