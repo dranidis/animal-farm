@@ -7,7 +7,7 @@ public class AnimalRunningState implements AnimalState {
         animal.move();
         if (animal.isTired()) {
             animal.setState(new AnimalSleepingState());
-        } else if (animal.isHungry()) {
+        } else {
             animal.setState(new AnimalEatingState());
         }
     }
