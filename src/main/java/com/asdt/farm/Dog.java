@@ -6,21 +6,20 @@ public class Dog extends Animal {
     private String name;
     private int stamina;
     private int energy;
-	public Dog(String string, AnimalState state) {
-	    super(state);
+	public Dog(String string) {
         name = string;
         stamina = STAMINA;
         energy = ENERGY;
 	}
 
     @Override
-    public AnimalState getState() {
-        if (stamina <= 0) {
-            return new AnimalTiredState();
-        } else if (energy <= 0) {
-            return new AnimalHungryState();
-        }
-        return new AnimalHealthyState();
+    protected boolean isHungry() {
+        return (energy <= 0);
+    }
+
+    @Override
+    protected boolean isTired() {
+        return (stamina <= 0);
     }
 
     @Override

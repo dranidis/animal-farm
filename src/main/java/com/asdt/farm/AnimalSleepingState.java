@@ -1,10 +1,10 @@
 package com.asdt.farm;
 
-public class AnimalTiredState implements AnimalState {
+public class AnimalSleepingState implements AnimalState {
 
     @Override
     public void act (AnimalState context, Animal animal) {
         animal.sleep();
-        animal.setState(new AnimalHealthyState());
+        animal.setState(new AnimalEatingState());
     }
 }

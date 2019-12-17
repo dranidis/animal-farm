@@ -8,10 +8,10 @@ public class App {
     public static void main(String[] args) {
         Farm farm = new Farm();
 
-        Dog dog = new Dog("Lucy", new AnimalHealthyState());
+        Dog dog = new Dog("Lucy");
 
         farm.accept(dog);
 
-        farm.simulateSteps(7);
+        farm.simulateSteps(15);
     }
 }
