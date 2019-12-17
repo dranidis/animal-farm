@@ -15,10 +15,10 @@ public class Dog extends Animal {
 
     @Override
     public AnimalState getState() {
-        if (energy <= 0) {
-            return new AnimalHungryTaste();
-        } else if (stamina <= 0) {
+        if (stamina <= 0) {
             return new AnimalTiredState();
+        } else if (energy <= 0) {
+            return new AnimalHungryState();
         }
         return new AnimalHealthyState();
     }
