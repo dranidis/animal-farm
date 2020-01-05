@@ -34,9 +34,9 @@ public abstract class AbstractImportedFoodAdapter implements Food, FoodOrigin {
         String importedFoodName = importedFood.getName();
         switch (importedFoodName) {
         case SpecialImportedFood.IMPORTED_SPECIAL_FOOD_NAME:
-            return SimpleFood.SIMPLE_FOOD_NAME;
-        case SimpleImportedFood.IMPORTED_SIMPLE_FOOD_NAME:
             return SpecialFood.SPECIAL_FOOD_NAME;
+        case SimpleImportedFood.IMPORTED_SIMPLE_FOOD_NAME:
+            return SimpleFood.SIMPLE_FOOD_NAME;
         }
         return importedFood.getName();
     }
